@@ -1,7 +1,9 @@
 %header
   %nav
     .nav-wrapper
-      %a.brand-logo= link_to "Hi, I'm Travis!", root_path
+      -unless current_page?(root_path)
+        %h5.left
+          %a.brand-logo= link_to "Home", root_path
       %ul#nav-mobile.right.hide-on-med-and-down
         %li
           %span= link_to 'About', home_about_path
