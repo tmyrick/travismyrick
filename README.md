@@ -13,7 +13,7 @@ application up and running.
 
 * Database initialization
 
-* How to run the test suite
+* How to run the test suite: Codeship
 
 * Services (job queues, cache servers, search engines, etc.)
 
