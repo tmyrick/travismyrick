@@ -1,0 +1,32 @@
+#home {
+  div.parallax-container {
+    height: calc(100vh - 64px)
+  }
+  .container {
+    margin-top: 50px;
+  }
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  height: 70px;
+  z-index: 1;
+  width: 100%;
+}
+
+div.parallax-container {
+  height: 600px;
+}
+.parallax img {
+  display: block !important;
+}
+
+.hideme {
+  opacity:0;
+}
+
+.add-pad {
+  padding-top: 65px;
+}
+

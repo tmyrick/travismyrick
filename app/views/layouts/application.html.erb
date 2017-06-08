@@ -9,7 +9,7 @@
   </head>
 
   <body>
-    <%= render 'layouts/nav' %>
+    <%= render 'layouts/header' unless current_page?(root_path) %>
     <%= yield %>
     <%= render 'layouts/footer' %>
   </body>
