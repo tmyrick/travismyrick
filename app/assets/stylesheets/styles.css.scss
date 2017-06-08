@@ -1,3 +1,4 @@
+// Home parallax styles
 #home {
   div.parallax-container {
     height: calc(100vh - 64px)
@@ -7,23 +8,27 @@
   }
 }
 
+// Nav styles
 nav .nav-wrapper {
   margin-left: 22px;
 }
 
-.fixed {
-  position: fixed;
-  top: 0;
-  height: 70px;
-  z-index: 1;
-  width: 100%;
-}
-
+// Interior page parallax styles
 div.parallax-container {
   height: 600px;
+
+  .parallax img {
+    display: block !important;
+  }
 }
-.parallax img {
-  display: block !important;
+
+// Helpers
+.fixed {
+  position: sticky;
+  top: 0;
+  height: 100%;
+  z-index: 1;
+  width: 100%;
 }
 
 .hideme {
@@ -34,3 +39,10 @@ div.parallax-container {
   padding-top: 65px;
 }
 
+.top {
+  z-index: 100;
+  position: absolute;
+  top: 200px;
+  left: 0;
+  width: 100%;
+}
