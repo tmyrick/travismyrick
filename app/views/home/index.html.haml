@@ -1,8 +1,14 @@
 #home
   .parallax-container
+    %h1.top.center-align.white-text.scrollfire Hey, I'm Travis!
+    .row.top.center-align
+      .col.s12.m2.push-m4
+        =link_to 'Contact', 'https://google.com', :class => "waves-effect waves-light btn-large mygreen cta right scrollfire"
+      .col.s12.m2.push-m4
+        =link_to 'Resume', '#modal1', :class => "waves-effect waves-light btn-large mygreen cta left scrollfire"
     .parallax
-      %h1.span.top.center-align.white-text.hideme Hey, I'm Travis!
       =image_tag "sunrise_grassy_field.jpg"
+  #modal1.modal.opacity=render'layouts/form'
   =render 'layouts/header'
   .container
     .row.hideme

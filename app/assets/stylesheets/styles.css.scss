@@ -1,7 +1,14 @@
 // Home parallax styles
 #home {
   div.parallax-container {
-    height: calc(100vh - 64px)
+    height: calc(100vh - 64px);
+    h1 {
+      cursor: default;
+    }
+    .cta {
+      padding: 0px 6rem;
+      opacity: .8;
+    }
   }
   .container {
     margin-top: 50px;
@@ -11,6 +18,10 @@
 // Nav styles
 nav .nav-wrapper {
   margin-left: 22px;
+
+  ul, ul li {
+    height: inherit;
+  }
 
   i {
     font-size: 2.4em;
@@ -27,6 +38,17 @@ div.parallax-container {
   }
 }
 
+// Modal form styles
+.modal {
+  background: #ff;
+  opacity: .8 !important;
+
+  .modal-content {
+    opacity: 1;
+  }
+
+}
+
 // Helpers
 .fixed {
   position: sticky;
@@ -40,14 +62,17 @@ div.parallax-container {
   opacity:0;
 }
 
-.add-pad {
-  padding-top: 65px;
-}
-
 .top {
   z-index: 100;
-  position: absolute;
+  position: relative;
   top: 200px;
   left: 0;
   width: 100%;
+}
+
+.opacity {
+  background: #fff;
+  opacity: .6;
+  z-index: -10;
+  font-size: 32px;
 }

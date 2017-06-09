@@ -5,7 +5,7 @@
         %h5.left
           %a.brand-logo= link_to "Home", root_path
       %ul#nav-mobile.right.hide-on-med-and-down
-        %li
+        %li{:class => ("active" if current_page?(home_about_path))}
           %span= link_to 'About', home_about_path
         %li
           %i.fi-social-linkedin
