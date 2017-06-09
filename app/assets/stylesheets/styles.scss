@@ -15,6 +15,7 @@ $mygreen: #26A674;
     .cta {
       background-color: $mygreen;
       padding: 0 3rem;
+      margin: 7px;
       opacity: .8;
       width:50%;
     }
@@ -30,6 +31,15 @@ nav .nav-wrapper {
 
   ul, ul li, li a {
     height: inherit;
+  }
+
+  ul li {
+    display: inline;
+    width: 25%;
+  }
+
+  .logo {
+    margin: 16px 0 0 15px;
   }
 
   i {
