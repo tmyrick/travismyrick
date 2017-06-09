@@ -5,8 +5,6 @@
         %h5.logo.left
           %a.brand-logo= link_to "Home", root_path
       %ul#nav-mobile.right
-        %li{:class => ("active" if current_page?(home_about_path))}
-          %span= link_to 'About', home_about_path
         %li
           %a{ :href => "https://www.linkedin.com/in/travis-myrick", :target => '_blank' }
             %i.fi-social-linkedin
@@ -16,3 +14,6 @@
         %li
           %a{:href => 'mailto:myricktc@gmail.com', :target => '_blank'}
             %i.fi-mail
+        -unless current_page?(home_about_path)
+          %li.hide-on-small-only
+            %span= link_to 'About Me', home_about_path
