@@ -3,14 +3,14 @@
     .row
       .input-field.col.s12
         %i.material-icons.prefix account_circle
-        %input#first_name.validate{:type => "text"}/
-        %label.active{:for => "first_name"} Name
+        %input#icon_account_circle{:type => "text", :class => "validate"}/
+        %label.active{:for => "icon_account_circle"} Name
     .row
       .input-field.col.s12
         %i.material-icons.prefix email
-        %input#email.validate{:type => "email"}/
+        %input#email{:type => "email", :class => "validate"}/
         %label.active{:for => "email"} Email
     .row
-      %button.center-align.btn.waves-effect.waves-light{:name => "action", :type => "submit"}
+      %button.center-align.btn.waves-effect.waves-light.col.s10.push-s1{:name => "action", :type => "submit"}
         Submit
         %i.material-icons.right send

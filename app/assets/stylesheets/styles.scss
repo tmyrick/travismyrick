@@ -1,3 +1,10 @@
+// Colors
+$mygreen: #26A674;
+
+.mygreen {
+  background-color: $mygreen;
+}
+
 // Home parallax styles
 #home {
   div.parallax-container {
@@ -6,8 +13,10 @@
       cursor: default;
     }
     .cta {
-      padding: 0px 6rem;
+      background-color: $mygreen;
+      padding: 0 3rem;
       opacity: .8;
+      width:50%;
     }
   }
   .container {
@@ -19,7 +28,7 @@
 nav .nav-wrapper {
   margin-left: 22px;
 
-  ul, ul li {
+  ul, ul li, li a {
     height: inherit;
   }
 
@@ -34,7 +43,7 @@ div.parallax-container {
   height: 600px;
 
   .parallax img {
-    display: block !important;
+
   }
 }
 
@@ -42,9 +51,17 @@ div.parallax-container {
 .modal {
   background: #ff;
   opacity: .8 !important;
+  max-width: 400px;
 
   .modal-content {
     opacity: 1;
+
+    .material-icons {
+      transition: 3.2s ease-out;
+    }
+    .input-field .prefix {
+      top: 9px;
+    }
   }
 
 }

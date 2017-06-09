@@ -8,8 +8,11 @@
         %li{:class => ("active" if current_page?(home_about_path))}
           %span= link_to 'About', home_about_path
         %li
-          %i.fi-social-linkedin
+          %a{ :href => "https://www.linkedin.com/in/travis-myrick", :target => '_blank' }
+            %i.fi-social-linkedin
         %li
-          %i.fi-social-github
+          %a{ :href => "https://github.com/tmyrick", :target => '_blank' }
+            %i.fi-social-github
         %li
-          %i.fi-mail
+          %a{:href => 'mailto:myricktc@gmail.com', :target => '_blank'}
+            %i.fi-mail
