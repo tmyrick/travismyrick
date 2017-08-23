@@ -11,46 +11,141 @@
   #modal1.modal.opacity=render'layouts/form'
   =render 'layouts/header'
   .container
-    .row.hideme
+    .row
+      .col.s12.m6
+        %h3.s12.name Travis C Myrick
+        %h5 I design, create, and fix things.
+      =image_tag  "https://s3-us-west-2.amazonaws.com/homebase-tcm/assets/headshot1-tcm.jpg", :class => "left main-image circle responsive-img"
+    .row
       .col.s12
-        =image_tag  "https://s3-us-west-2.amazonaws.com/homebase-tcm/assets/headshot1-tcm.jpg", :class => "left main-image circle responsive-img hideme"
-        .col.s12.m4
-          %h3.s12 Travis C Myrick
-          %h5 I design, create, and fix things.
-    .row.hideme
+        %p I have a passion for fixing things. If anything
+    .row
       .col.s12
-        %p Squashy armchairs dirt on your nose brass scales crush the Sopophorous bean with flat side of silver dagger, releases juice better than cutting. Full moon Whomping Willow three turns should do it lemon drops. Locomotor trunks owl treats that will be 50 points, Mr. Potter. Witch Weekly, he will rise again and he will come for us, headmaster Erumpent horn. Fenrir Grayback horseless carriages ‘zis is a chance many would die for!
-    .row.hideme
-      .col
         %h3 Experience
-    .row.hideme
-      .col.s12.m6
-        .card
-          .card-content
-            %h5.card-title Jr. Support Engineer
-            %p.title G5 Search Marketing
-            %div Aug 2016 – Present
-            %div Bend, Oregon
-      .col.s12.m6
-        .card
-          .card-content
-            %h5.card-title Technical Application Specialist (Tier 3)
-            %p.title G5 Search Marketing
-            %div Dec 2015 – Aug 2016 - 9 mos
-            %div Bend, Oregon
-      .col.s12.m6
-        .card
-          .card-content
-            %h5.card-title Senior Technical Support Specialist (Tier 2)
-            %p.title G5 Search Marketing
-            %div Jul 2015 – Dec 2015 - 6 mos
-            %div Bend, Oregon
-      .col.s12.m6
-        .card
-          .card-content
-            %h5.card-title Support Specialist (Tier 1)
-            %p.title G5 Search Marketing
-            %div Oct 2012 – Jul 2015 - 2 yrs 10 mos
-            %div Bend, Oregon
+    .row
+      .col.s12
+        %ul.collapsible.popout{"data-collapsible" => "accordion"}
+          %li
+            .collapsible-header.active
+              %i.material-icons> settings_ethernet
+              Jr. Support Engineer
+            .collapsible-body
+              %h5 G5 Search Marketing
+              %span Aug 2016 - Aug 2017
+              %span Bend, Oregon
+              .row
+                %ul.col.m4.s12
+                  %li Did stuff
+                  %li Did stuff
+                  %li Did stuff
+                %ul.col.m4.s12
+                  %li Did stuff
+                  %li Did stuff
+                  %li Did stuff
+                %ul.col.m4.s12
+                  %li Did stuff
+                  %li Did stuff
+                  %li Did stuff
+          %li
+            .collapsible-header
+              %i.material-icons> filter_drama
+              Application Support Specialist
+            .collapsible-body
+              %h5 G5 Search Marketing
+              %span Dec 2015 – Aug 2016
+              %span Bend, Oregon
+              .row
+                %ul.col.m4.s12
+                  %li Did stuff
+                  %li Did stuff
+                  %li Did stuff
+                %ul.col.m4.s12
+                  %li Did stuff
+                  %li Did stuff
+                  %li Did stuff
+                %ul.col.m4.s12
+                  %li Did stuff
+                  %li Did stuff
+                  %li Did stuff
+          %li
+            .collapsible-header
+              %i.material-icons> important_devices
+              Sr. Technical Support Specialist
+            .collapsible-body
+              %h5 G5 Search Marketing
+              %span Jul 2015 – Dec 2015
+              %span Bend, Oregon
+              .row
+                %ul.col.m4.s12
+                  %li Did stuff
+                  %li Did stuff
+                  %li Did stuff
+                %ul.col.m4.s12
+                  %li Did stuff
+                  %li Did stuff
+                  %li Did stuff
+                %ul.col.m4.s12
+                  %li Did stuff
+                  %li Did stuff
+                  %li Did stuff
+          %li
+            .collapsible-header
+              %i.material-icons> headset_mic
+              Support Specialist
+            .collapsible-body
+              %h5 G5 Search Marketing
+              %span Oct 2012 – Jul 2015
+              %span Bend, Oregon
+              .row
+                %ul.col.m4.s12
+                  %li Did stuff
+                  %li Did stuff
+                  %li Did stuff
+                %ul.col.m4.s12
+                  %li Did stuff
+                  %li Did stuff
+                  %li Did stuff
+                %ul.col.m4.s12
+                  %li Did stuff
+                  %li Did stuff
+                  %li Did stuff
 
+:javascript
+    $(window).scroll(function () {
+    var viewport = $(window).height();
+    var scrolltop = ($(window).scrollTop())
+    if($('#home').length >0 ){
+      if ($(window).scrollTop() > viewport - 64) {
+        $('header').addClass('fixed');
+        $('#home .container').addClass('padded');
+        // $('.name').addClass('top');
+      }
+      else {
+        $('header').removeClass('fixed');
+        $('#home .container').removeClass('padded');
+        // $('.name').addClass('top');
+      }
+    }
+    else {
+      $('header').addClass('fixed');
+    };
 
+    function fixDiv() {
+      var $div = $(".name");
+      if ($(window).scrollTop() > viewport - -51) { 
+          $('.name').css({'position': 'fixed', 'top': '0', 'width': '100%', 'margin-top': '1.4rem'}); 
+          $('.name').addClass('hideme');
+      };
+      if ($(window).scrollTop() > viewport - -50) {
+          $('.name').addClass('header-name');
+          $('.name').removeClass('hideme');  
+      }
+      else {
+          $('.name').css({'position': 'static', 'top': 'auto', 'width': '100%'});
+          $('.name').removeClass('header-name');
+      } 
+    }
+
+    $(".name").data("top", $(".name").offset().top); // set original position on load
+    $(window).scroll(fixDiv);
+  })

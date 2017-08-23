@@ -26,7 +26,15 @@
 }
 
 // Nav styles
+header {
+  max-height: $nav-height;
+}
 nav .nav-wrapper {
+
+  .fixedTop {
+    top: 0;
+    margin: 0 !important;
+  }
 
   ul {
   }
@@ -85,11 +93,12 @@ div.parallax-container {
 
 // Helpers
 .fixed {
-  position: sticky;
+  position: fixed;
   top: 0;
   height: 100%;
   z-index: 1;
   width: 100%;
+  padding-bottom: 20px;
 }
 
 .hideme {
@@ -115,6 +124,28 @@ div.parallax-container {
   font-weight: bold;
 }
 
+.name {
+  z-index: 109;
+}
+
+.header-name {
+  color: #fff;
+  opacity: 1;
+  font-size: 1.4em;
+  -webkit-transition: opacity 1s ease-in;
+  -moz-transition: opacity 1s ease-in;
+  -ms-transition: opacity 1s ease-in;
+  -o-transition: opacity 1s ease-in;
+  transition: opacity 1s ease-in;
+  transition: font 1s ease
+}
+
+.padded {
+  margin-top: 110px !important;
+}
+
+
+
 
 
 @media #{$small-and-down} {
@@ -131,3 +162,18 @@ div.parallax-container {
     margin: 0 auto;
   }
 }
+
+// Class for when element is above threshold
+  .pin-top {
+    position: relative;
+  }
+
+  // Class for when element is below threshold
+  .pin-bottom {
+    position: relative;
+  }
+
+  // Class for when element is pinned
+  .pinned {
+    position: fixed !important;
+  }
