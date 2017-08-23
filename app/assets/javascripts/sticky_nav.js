@@ -9,10 +9,11 @@ if($(this).scrollTop() > 150) {
 
 });
 
+// Helpers
 
-$(window).scroll(example); 
+// $(window).scroll(example); 
 
-function example() {
-    var tempScrollTop = $(window).scrollTop();
-    console.log("Scroll from Top: " + tempScrollTop.toString());
-};
+// function example() {
+//     var tempScrollTop = $(window).scrollTop();
+//     console.log("Scroll from Top: " + tempScrollTop.toString());
+// };

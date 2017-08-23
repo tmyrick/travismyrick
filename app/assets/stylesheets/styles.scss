@@ -1,7 +1,7 @@
 @import 'variables.scss';
-  body {
+body {
   // Home parallax styles
-  #home {
+  &.home.index {
     div.parallax-container {
       height: calc(100vh - 64px);
       h1 {
@@ -92,8 +92,12 @@
   }
 
   // Collapsibles
-.collection-item li {
+  .collection-item li {
     list-style: circle !important;
+  }
+
+  .collection .collection-item {
+    padding: 35px;
   }
 
   // Helpers
