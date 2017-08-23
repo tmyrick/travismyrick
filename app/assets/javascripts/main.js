@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  // Hide me stuff
   $('.hideme').each( function(i){
     var bottom_of_object = $(this).offset().top + $(this).outerHeight();
     var bottom_of_window = $(window).scrollTop() + $(window).height();
@@ -8,6 +9,12 @@ $(document).ready(function(){
       $(this).animate({'opacity':'1'},800);
     }
   });
+
+  // Materialize doesn't handle columns inside of cards well, this is a hack for that
+  var cardHeight = $('#skills').height();
+  $('.skills').css({'height': cardHeight});
+
+  // Sticky nav logic for home + all other pages
   $(window).scroll(function () {
     var viewport = $(window).height();
     var scrolltop = ($(window).scrollTop())
@@ -26,6 +33,8 @@ $(document).ready(function(){
     else {
       $('header').addClass('fixed');
     };
+
+    // Handles the rest of the elements when the home nav sticks
     if($('.home.index').length >0 ){
       function fixDiv() {
         var $div = $(".name");
@@ -44,15 +53,6 @@ $(document).ready(function(){
       };
       $(".name").data("top", $(".name").offset().top); // set original position on load
       $(window).scroll(fixDiv);
-    }
-  });
-  $('.hideme').each( function(i){
-    var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-    var bottom_of_window = $(window).scrollTop() + $(window).height();
-
-    /* If the object is completely visible in the window, fade it it */
-    if( bottom_of_window > bottom_of_object ){
-      $(this).animate({'opacity':'1'},850);
     }
   });
 });

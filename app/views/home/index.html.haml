@@ -1,9 +1,8 @@
-
 .parallax-container
   %h1.top.center-align.white-text.scrollfire Hey, I'm Travis!
   .row.top.center-align
     .col.s12.m6.push-m1.push-l1
-      =link_to 'Contact', 'https://google.com', :class => "waves-effect waves-light btn-large mygreen cta z-depth-5"
+      =link_to 'Contact', '#modal1', :class => "waves-effect waves-light btn-large mygreen cta z-depth-5"
     .col.s12.m6.pull-m1.pull-l1
       =link_to 'Resume', '#resume', :class => "waves-effect waves-light btn-large mygreen cta center-align z-depth-5"
   .parallax
@@ -11,15 +10,57 @@
 #modal1.modal.opacity=render'layouts/form'
 =render 'layouts/header'
 .container
-  .row
+  .row.hide-on-small-only
     .col.s12.m6
-      %h3.s12.name{:href => '#resume'} Travis C Myrick
+      %h3.s12.name Travis C Myrick
       %h5 I design, create, and fix things.
     =image_tag  "https://s3-us-west-2.amazonaws.com/homebase-tcm/assets/headshot1-tcm.jpg", :class => "left main-image circle responsive-img"
+  .row.hide-on-med-and-up 
+    .col.s12 
+      %h3.s12 Travis C Myrick
+      %h5 I design, create, and fix things.
+
   .row
     .col.s12
       %p I have a passion for fixing things. I truly love it, from the very beginning when I realize something is broken, I get some kind of intrinsic excitement to fix it. I also happen to love helping people! There's nothing better than to fix or clarify and issue for someone and to see the happiness and gratitude in their eyes. Fixing things is so much fun, but seeing or hearing the reaction of those for whom I've fixed the issue is priceless. 
   .row
+    .col.m4.s12#skills
+      .card.skills
+        .card-content
+          .col.s12.m6
+            .card-title.blue-text Skills
+            %ul
+              %li HTML 5
+              %li CSS 3
+              %li Novice Rubyist (Ruby on Rails)
+              %li Novice JavaScript
+              %li Intermmediate Adobe Photoshop
+              %li Bash/CLI
+    .col.s12.m4
+      .card
+        .card-content
+          .card-title.green-text Apps I know well
+          %ul
+            %li Heroku
+            %li DNSimple
+            %li GoDaddy & Network Solutions
+            %li AWS S3, Cloudfront and Cert Manager
+            %li ZenDesk
+            %li Pivotal Tracker
+            %li GitHub
+            %li BitBucket
+            %li ..and many more!
+    .col.s12.m4
+      .card
+        .card-content
+          .card-title.red-text Traits
+          %ul
+            %li Intricate eye for detail
+            %li Excellent communication
+            %li A technical prowess
+            %li Adept critical thinker
+
+  .row#resume
     .col.s12
       %h3 Experience
       %ul.collection
