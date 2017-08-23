@@ -1,179 +1,185 @@
 @import 'variables.scss';
+  body {
+  // Home parallax styles
+  #home {
+    div.parallax-container {
+      height: calc(100vh - 64px);
+      h1 {
+        cursor: default;
+      }
+      .cta {
+        background-color: rgba(0, 0, 0, 0.4);
+        border: 1px solid white;
+        padding: 0 3rem;
+        margin: 7px;
+        opacity: .8;
+        width:50%;
 
-// Home parallax styles
-#home {
-  div.parallax-container {
-    height: calc(100vh - 64px);
-    h1 {
-      cursor: default;
+        &:hover {
+          background-color: rgba(25, 25, 25, 0.6);
+        }
+      }
     }
-    .cta {
-      background-color: rgba(0, 0, 0, 0.4);
-      border: 1px solid white;
-      padding: 0 3rem;
-      margin: 7px;
-      opacity: .8;
-      width:50%;
+    .container {
+      margin-top: 50px;
+    }
+  }
 
-      &:hover {
-        background-color: rgba(25, 25, 25, 0.6);
+  // Nav styles
+  header {
+    max-height: $nav-height;
+  }
+  nav .nav-wrapper {
+
+    .fixedTop {
+      top: 0;
+      margin: 0 !important;
+    }
+
+    ul {
+    }
+
+    ul, ul li, li a {
+      height: inherit;
+    }
+
+    ul li {
+      display: inline-block;
+      width: auto;
+      float: right;
+      text-align: center;
+    }
+
+    li a {
+      padding: 0 40px;
+    }
+
+    .logo {
+      margin: 16px 0 0 15px;
+    }
+
+    i {
+      font-size: 2.4em;
+
+    }
+  }
+
+  // Interior page parallax styles
+  div.parallax-container {
+    height: 600px;
+
+    .parallax img {
+
+    }
+  }
+
+  // Modal form styles
+  .modal {
+    background: #ff;
+    opacity: .8 !important;
+    max-width: 400px;
+
+    .modal-content {
+      opacity: 1;
+
+      .material-icons {
+        transition: 0.5s ease-out;
+      }
+      .input-field .prefix {
+        top: 9px;
       }
     }
   }
-  .container {
-    margin-top: 50px;
+
+  // Collapsibles
+.collection-item li {
+    list-style: circle !important;
   }
-}
 
-// Nav styles
-header {
-  max-height: $nav-height;
-}
-nav .nav-wrapper {
-
-  .fixedTop {
+  // Helpers
+  .fixed {
+    position: fixed;
     top: 0;
-    margin: 0 !important;
+    height: 100%;
+    z-index: 1;
+    width: 100%;
+    padding-bottom: 20px;
   }
 
-  ul {
+  .hideme {
+    opacity:0;
   }
 
-  ul, ul li, li a {
-    height: inherit;
+  .top {
+    z-index: 100;
+    position: relative;
+    top: 200px;
+    left: 0;
+    width: 100%;
   }
 
-  ul li {
-    display: inline-block;
-    width: auto;
-    float: right;
-    text-align: center;
+  .opacity {
+    background: #fff;
+    opacity: .6;
+    z-index: -10;
+    font-size: 32px;
   }
 
-  li a {
-    padding: 0 40px;
+  .title {
+    font-weight: bold;
   }
 
-  .logo {
-    margin: 16px 0 0 15px;
+  .name {
+    z-index: 109;
   }
 
-  i {
-    font-size: 2.4em;
-
-  }
-}
-
-// Interior page parallax styles
-div.parallax-container {
-  height: 600px;
-
-  .parallax img {
-
-  }
-}
-
-// Modal form styles
-.modal {
-  background: #ff;
-  opacity: .8 !important;
-  max-width: 400px;
-
-  .modal-content {
+  .header-name {
+    color: #fff;
     opacity: 1;
-
-    .material-icons {
-      transition: 0.5s ease-out;
-    }
-    .input-field .prefix {
-      top: 9px;
-    }
+    font-size: 1.4em;
+    -webkit-transition: opacity 1s ease-in;
+    -moz-transition: opacity 1s ease-in;
+    -ms-transition: opacity 1s ease-in;
+    -o-transition: opacity 1s ease-in;
+    transition: opacity 1s ease-in;
+    transition: font 1s ease
   }
-}
 
-// Helpers
-.fixed {
-  position: fixed;
-  top: 0;
-  height: 100%;
-  z-index: 1;
-  width: 100%;
-  padding-bottom: 20px;
-}
-
-.hideme {
-  opacity:0;
-}
-
-.top {
-  z-index: 100;
-  position: relative;
-  top: 200px;
-  left: 0;
-  width: 100%;
-}
-
-.opacity {
-  background: #fff;
-  opacity: .6;
-  z-index: -10;
-  font-size: 32px;
-}
-
-.title {
-  font-weight: bold;
-}
-
-.name {
-  z-index: 109;
-}
-
-.header-name {
-  color: #fff;
-  opacity: 1;
-  font-size: 1.4em;
-  -webkit-transition: opacity 1s ease-in;
-  -moz-transition: opacity 1s ease-in;
-  -ms-transition: opacity 1s ease-in;
-  -o-transition: opacity 1s ease-in;
-  transition: opacity 1s ease-in;
-  transition: font 1s ease
-}
-
-.padded {
-  margin-top: 110px !important;
-}
+  .padded {
+    margin-top: 110px !important;
+  }
 
 
 
 
 
-@media #{$small-and-down} {
-  // styles for small screens and down
-  nav .nav-wrapper {
-    ul {
-      width: 100%;
+  @media #{$small-and-down} {
+    // styles for small screens and down
+    nav .nav-wrapper {
+      ul {
+        width: 100%;
+      }
+      ul li {
+        width: 32.5%;
+      }
     }
-    ul li {
-      width: 32.5%;
+    .main-image {
+      margin: 0 auto;
     }
   }
-  .main-image {
-    margin: 0 auto;
-  }
+
+  // Class for when element is above threshold
+    .pin-top {
+      position: relative;
+    }
+
+    // Class for when element is below threshold
+    .pin-bottom {
+      position: relative;
+    }
+
+    // Class for when element is pinned
+    .pinned {
+      position: fixed !important;
+    }
 }
-
-// Class for when element is above threshold
-  .pin-top {
-    position: relative;
-  }
-
-  // Class for when element is below threshold
-  .pin-bottom {
-    position: relative;
-  }
-
-  // Class for when element is pinned
-  .pinned {
-    position: fixed !important;
-  }
