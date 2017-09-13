@@ -14,6 +14,6 @@
         %li
           %a{:href => 'mailto:myricktc@gmail.com', :target => '_blank'}
             %i.fi-mail
-        -unless current_page?(home_about_path)
+        -unless current_page?(about_path)
           %li.hide-on-small-only
-            %span= link_to 'About Me', home_about_path
+            %span= link_to 'About Me', about_path
