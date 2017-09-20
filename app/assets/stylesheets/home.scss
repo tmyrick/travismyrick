@@ -2,7 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// .main-image {
+//   max-height: 305px;
+//   margin: 15px 10px;
+// }
+
 .main-image {
-  max-height: 305px;
-  margin: 0px 10px -46px;
+	background: url("https://s3-us-west-2.amazonaws.com/homebase-tcm/assets/transparent-me.png") no-repeat fixed;
+	background-size: 49%;
+	background-position: -5% -30%;
+	margin-top:20px;
+	width: 40%;
+	height: 100%;
 }
