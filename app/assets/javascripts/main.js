@@ -59,6 +59,14 @@ $(document).ready(function(){
     if ($(window).scrollTop() + $(window).height() > $(document).height() - 1000) {
       $('#action-footer').removeClass('hide');
     }
+
+    // Handle the home page bg image
+    if ($(window).width() > 2100) {
+      var userWidth = $(window).width();
+      var adjustedWidth = (userWidth / 40)+80;
+      $('.main-image').css({'background-position-x': adjustedWidth});
+    }
+
   });
   if ($(window).width() > 601) {
     $('.show-on-small').addClass('hide');
@@ -66,4 +74,5 @@ $(document).ready(function(){
   // Make all skills cards have same height unless mobile
   var cardHeight = $('#skills').height();
   $('.skills').css({'height': cardHeight});
+
 });
