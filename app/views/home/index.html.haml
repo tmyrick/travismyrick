@@ -6,7 +6,7 @@
     .col.s12.m6.pull-m1.pull-l1
       =link_to 'Resume', '#resume', :class => "waves-effect waves-light btn-large mygreen cta center-align z-depth-5"
   .parallax
-    =image_tag "https://s3-us-west-2.amazonaws.com/homebase-tcm/assets/desert.png"
+    =image_tag "https://s3-us-west-2.amazonaws.com/homebase-tcm/assets/desert-pixels.png"
 
     / Add text field
 #modal1.modal.opacity=render'layouts/form'
@@ -23,20 +23,20 @@
       %p.col.s12.show-on-small.center-align
         =image_tag  "https://s3-us-west-2.amazonaws.com/homebase-tcm/assets/headshot1-tcm.jpg", :class => "responsive-img circle"
       %p.col.s12.m9.right 
-        I have a passion for fixing things, I derive some kind of odd, intrinsic value from each thing I'm able to fix. I also happen to love helping people! There's nothing better than to fix or clarify an issue for someone and to see the happiness in their eyes. Fixing things is great, but seeing or hearing the reaction of those whom I've fixed something for is priceless. 
+        I have a passion for fixing things. With each bug/defect/loose doorknob I fix, I am intrinsically rewarded by the completed product. I love helping people as well, and when I'm able to fix something that makes a positive impact on someone else's day, that's a huge bonus!
       %p.col.s12.m9.right
-        I'm looking for a run but challenging career that will utilize my technical skills and passion for helping people. I may not be qualified for most engineering jobs on paper, but am able to develop apps and write code close to that of an associate software engineer. I study coding on the side, mostly Ruby on Rails and Javascript. This website is a Rails application built by yours truly :)
-  .row
-    .col.m4.s12#skills
+        I'm looking for a fun but challenging career opportunity that will utilize my technical skills and passion for helping people. This website is a Rails application built by yours truly :)
+  .row#skills
+    .col.m4.s12
       .card.skills
         .card-content
           .card-title.blue-text Skills
           %table.highlight
             %tbody
               %tr
-                %td HTML 5
+                %td HTML5
               %tr
-                %td CSS 3 (Sass)
+                %td CSS3 (Sass)
               %tr
                 %td MySQL / PostgreSQL
               %tr
@@ -46,10 +46,10 @@
               %tr
                 %td Intermmediate Adobe Photoshop
               %tr
-                %td Bash/CLI
+                %td Linux / Unix / Windows
 
     .col.s12.m4
-      .card
+      .card.skills
         .card-content
           .card-title.green-text Apps
           %table.highlight
@@ -71,7 +71,7 @@
               %tr
                 %td BitBucket
     .col.s12.m4
-      .card
+      .card.skills
         .card-content
           .card-title.red-text Traits
           %table.highlight.table
@@ -83,7 +83,7 @@
               %tr
                 %td Excellent communication
               %tr
-                %td A technical prowess
+                %td Technical prowess
               %tr
                 %td Adept critical thinker
               %tr

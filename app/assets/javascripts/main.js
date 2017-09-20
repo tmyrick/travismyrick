@@ -13,10 +13,6 @@ $(document).ready(function(){
     }
   });
 
-  // Materialize doesn't handle columns inside of cards well, this is a hack for that
-  var cardHeight = $('#skills').height();
-  $('.skills').css({'height': cardHeight});
-
   // Sticky nav logic for home + all other pages
   $(window).scroll(function () {
     var viewport = $(window).height();
@@ -67,4 +63,7 @@ $(document).ready(function(){
   if ($(window).width() > 601) {
     $('.show-on-small').addClass('hide');
   };
+  // Make all skills cards have same height unless mobile
+  var cardHeight = $('#skills').height();
+  $('.skills').css({'height': cardHeight});
 });
