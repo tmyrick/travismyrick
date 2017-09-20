@@ -6,12 +6,12 @@
     .col.s12.m6.pull-m1.pull-l1
       =link_to 'Resume', '#resume', :class => "waves-effect waves-light btn-large mygreen cta center-align z-depth-5"
   .parallax
-    =image_tag "https://s3-us-west-2.amazonaws.com/homebase-tcm/assets/sunrise_grassy_field.jpg"
+    =image_tag "https://s3-us-west-2.amazonaws.com/homebase-tcm/assets/desert.png"
 
     / Add text field
 #modal1.modal.opacity=render'layouts/form'
 =render 'layouts/header'
-.container
+.container#resume
   .row.hide-on-small-only
     .col.s12.m6
       %h3.s12.name Travis C Myrick
@@ -51,7 +51,7 @@
     .col.s12.m4
       .card
         .card-content
-          .card-title.green-text Apps I know well
+          .card-title.green-text Apps
           %table.highlight
             %tbody
               %tr
@@ -91,12 +91,12 @@
               %tr
                 %td Able to switch tasks on the fly
 
-  .row#resume
+  .row
     .col.s12
       %h3 Experience
       %ul.collection
         %li.collection-item.avatar
-          %i.material-icons.circle.blue settings_ethernet
+          %i.material-icons.circle.blue code
           %span.title
             %a{:href => "https://www.getg5.com", :target => :blank} G5 Search Marketing
           %p
@@ -259,3 +259,32 @@
               SendGrid
               %br/ 
               Netsuite
+  .row
+    .col.s12
+      %h3 Education
+      %ul.collection
+        %li.collection-item.avatar
+          %i.material-icons.circle.amber school
+          %span.title
+            %a{:href => "https://www.pdx.edu/", :target => :blank} Portland State University
+          %p
+            %h5 Bachelor of Arts
+            %span Philosophy
+            %br/
+            %span Sep 2007 - Aug 2012
+            %br/
+            %span Portland, Oregon
+            %br/
+          .divider
+
+        %li.collection-item.avatar
+          %i.material-icons.circle.light-green school
+          %span.title
+            %a{:href => "http://shs.ssd6.org/", :target => :blank} Sisters High School
+          %p
+            %h5 Diploma
+            %span Sep 2004 - Jun 2007
+            %br/
+            %span Sisters, Oregon
+            %br/
+          .divider

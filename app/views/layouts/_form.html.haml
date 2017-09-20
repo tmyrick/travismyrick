@@ -11,6 +11,12 @@
         %input#email{:type => "email", :class => "validate"}/
         %label.active{:for => "email"} Email
     .row
+      .input-field.col.s12
+        %i.material-icons.prefix edit
+        %textarea#textarea1.materialize-textarea
+        %label{:for => "textarea1"} Comments
+
+    .row
       %button.center-align.btn.waves-effect.waves-light.col.s10.push-s1{:name => "action", :type => "submit"}
         Submit
         %i.material-icons.right send
