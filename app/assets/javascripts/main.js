@@ -58,6 +58,11 @@ $(document).ready(function(){
       $(".name").data("top", $(".name").offset().top); // set original position on load
       $(window).scroll(fixDiv);
     }
+    // Footer button doesn't show until user nearly scrolls to the end
+    $('#action-footer').addClass('hide');
+    if ($(window).scrollTop() + $(window).height() > $(document).height() - 1000) {
+      $('#action-footer').removeClass('hide');
+    }
   });
   if ($(window).width() > 601) {
     $('.show-on-small').addClass('hide');
