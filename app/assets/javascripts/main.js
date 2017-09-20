@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  // Calculate height for home page image
   var mainrow = $('#main-row').height();
   $('.main-image').css({'height': mainrow});
   // Hide me stuff
@@ -58,4 +59,7 @@ $(document).ready(function(){
       $(window).scroll(fixDiv);
     }
   });
+  if ($(window).width() > 601) {
+    $('.show-on-small').addClass('hide');
+  };
 });

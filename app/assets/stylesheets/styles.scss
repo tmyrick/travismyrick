@@ -163,6 +163,11 @@ body {
     margin-top: 104px !important;
   }
 
+  td {
+    cursor: default;
+    padding: 2px;
+  }
+
 
 
   @media #{$small-and-down} {

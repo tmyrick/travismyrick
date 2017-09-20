@@ -16,15 +16,12 @@
     .col.s12.m6
       %h3.s12.name Travis C Myrick
       %h5 I design, create, and fix things.
-  .row.hide-on-med-and-up 
-    .col.s12 
-      %h3.s12 Travis C Myrick
-      %h5 I design, create, and fix things.
 
   .row
     .col.s12#main-row
-      %p.col.s12.m3.main-image
-        / =image_tag  "https://s3-us-west-2.amazonaws.com/homebase-tcm/assets/transparent-me.png", :class => "right main-image responsive-img"
+      %p.col.s12.m3.main-image.hide-on-small-only
+      %p.col.s12.show-on-small.center-align
+        =image_tag  "https://s3-us-west-2.amazonaws.com/homebase-tcm/assets/headshot1-tcm.jpg", :class => "responsive-img circle"
       %p.col.s12.m9.right 
         I have a passion for fixing things, I derive some kind of odd, intrinsic value from each thing I'm able to fix. I also happen to love helping people! There's nothing better than to fix or clarify an issue for someone and to see the happiness in their eyes. Fixing things is great, but seeing or hearing the reaction of those whom I've fixed something for is priceless. 
       %p.col.s12.m9.right
@@ -34,39 +31,65 @@
       .card.skills
         .card-content
           .card-title.blue-text Skills
-          %ul
-            %li HTML 5
-            %li CSS 3 (Sass)
-            %li MySQL / PostgreSQL
-            %li Novice Rubyist (Ruby on Rails)
-            %li Novice JavaScript / jQuery
-            %li Intermmediate Adobe Photoshop
-            %li Bash/CLI
+          %table.highlight
+            %tbody
+              %tr
+                %td HTML 5
+              %tr
+                %td CSS 3 (Sass)
+              %tr
+                %td MySQL / PostgreSQL
+              %tr
+                %td Novice Rubyist (Ruby on Rails)
+              %tr
+                %td Novice JavaScript / jQuery
+              %tr
+                %td Intermmediate Adobe Photoshop
+              %tr
+                %td Bash/CLI
+
     .col.s12.m4
       .card
         .card-content
           .card-title.green-text Apps I know well
-          %ul
-            %li Heroku
-            %li DNSimple
-            %li GoDaddy & Network Solutions
-            %li AWS S3, Cloudfront and Cert Manager
-            %li ZenDesk
-            %li Pivotal Tracker
-            %li GitHub
-            %li BitBucket
+          %table.highlight
+            %tbody
+              %tr
+                %td Heroku
+              %tr
+                %td DNSimple
+              %tr
+                %td GoDaddy & Network Solutions
+              %tr
+                %td AWS S3, Cloudfront and Cert Manager
+              %tr
+                %td ZenDesk
+              %tr
+                %td Pivotal Tracker
+              %tr
+                %td GitHub
+              %tr
+                %td BitBucket
     .col.s12.m4
       .card
         .card-content
           .card-title.red-text Traits
-          %ul
-            %li Natural problem solver
-            %li Intricate eye for detail
-            %li Excellent communication
-            %li A technical prowess
-            %li Adept critical thinker
-            %li Proficient technical writer
-            %li Able to switch tasks on the fly
+          %table.highlight.table
+            %tbody
+              %tr
+                %td Natural problem solver
+              %tr
+                %td Intricate eye for detail
+              %tr
+                %td Excellent communication
+              %tr
+                %td A technical prowess
+              %tr
+                %td Adept critical thinker
+              %tr
+                %td Proficient technical writer
+              %tr
+                %td Able to switch tasks on the fly
 
   .row#resume
     .col.s12
