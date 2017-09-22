@@ -65,9 +65,9 @@ $(document).ready(function(){
       var userWidth = $(window).width();
       var adjustedHeight = (userWidth - 2100);
       var adjustedX = (adjustedHeight / 65.71 );
-      var newX = (17 + adjustedX);
-      var imageSizeModifier = (adjustedHeight / 70.6667);
-      var newSize = (33 - imageSizeModifier);
+      var newX = (19.2 + adjustedX);
+      var imageSizeModifier = (adjustedHeight / 66.6667);
+      var newSize = (28 - imageSizeModifier);
       $('.main-image').css({'background-size': newSize + '%'});
       $('.main-image').css({'background-position-x': newX + '%'});
       $('.main-image').css({'height': mainrow + 40});
