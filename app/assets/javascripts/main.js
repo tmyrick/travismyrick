@@ -1,7 +1,7 @@
 $(document).ready(function(){
   // Calculate height for home page image
   var mainrow = $('#main-row').height();
-  $('.main-image').css({'height': mainrow + 20});
+  $('.main-image').css({'height': mainrow + 10});
   // Hide me stuff
   $('.hideme').each( function(i){
     var bottom_of_object = $(this).offset().top + $(this).outerHeight();
@@ -70,6 +70,7 @@ $(document).ready(function(){
       var newSize = (33 - imageSizeModifier);
       $('.main-image').css({'background-size': newSize + '%'});
       $('.main-image').css({'background-position-x': newX + '%'});
+      $('.main-image').css({'height': mainrow + 40});
 
     }
 
