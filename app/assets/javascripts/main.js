@@ -1,7 +1,7 @@
 $(document).ready(function(){
   // Calculate height for home page image
   var mainrow = $('#main-row').height();
-  $('.main-image').css({'height': mainrow});
+  $('.main-image').css({'height': mainrow + 20});
   // Hide me stuff
   $('.hideme').each( function(i){
     var bottom_of_object = $(this).offset().top + $(this).outerHeight();
@@ -61,10 +61,16 @@ $(document).ready(function(){
     }
 
     // Handle the home page bg image
-    if ($(window).width() > 2100) {
+    if ($(window).width() > 2099) {
       var userWidth = $(window).width();
-      var adjustedWidth = (userWidth / 40)+80;
-      $('.main-image').css({'background-position-x': adjustedWidth});
+      var adjustedHeight = (userWidth - 2100);
+      var adjustedX = (adjustedHeight / 65.71 );
+      var newX = (17 + adjustedX);
+      var imageSizeModifier = (adjustedHeight / 70.6667);
+      var newSize = (33 - imageSizeModifier);
+      $('.main-image').css({'background-size': newSize + '%'});
+      $('.main-image').css({'background-position-x': newX + '%'});
+
     }
 
   });
