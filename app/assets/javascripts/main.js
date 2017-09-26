@@ -75,11 +75,15 @@ $(document).ready(function(){
     }
 
   });
+  
   if ($(window).width() > 601) {
     $('.show-on-small').addClass('hide');
+    var cardHeight = $('#skills').height();
+    var kudosHeight = $('#kudos').height();
+    $('.skills').css({'height': cardHeight});
+    $('.kudos').css({'height': kudosHeight});
   };
   // Make all skills cards have same height unless mobile
-  var cardHeight = $('#skills').height();
-  $('.skills').css({'height': cardHeight});
+
 
 });

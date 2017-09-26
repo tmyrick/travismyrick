@@ -169,13 +169,26 @@ body {
   }
 
   .quotes {
-    font-weight: 500;
-    font-size: 1.3em;
+    font-weight: 400;
+    font-size: 1.1em;
   }
 
   .skills td {
     padding-top: 5px;
   }
+
+  li {
+    list-style: circle !important;
+  }
+
+  ul.awards {
+    padding-left: 10px;
+  }
+
+  @media only screen and (max-width: 600px) { .row.valign-wrapper { display: inherit; } }
+
+
+  // End helpers
 
   @media #{$small-and-down} {
     // styles for small screens and down
