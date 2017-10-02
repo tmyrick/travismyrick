@@ -20,12 +20,12 @@ $(document).ready(function(){
     if($('.home.index').length >0 ){
       if ($(window).scrollTop() > viewport - 64) {
         $('header').addClass('fixed');
-        $('.home.index .container').addClass('padded');
+        $('.home.index #resume').addClass('padded');
         // $('.name').addClass('top');
       }
       else {
         $('header').removeClass('fixed');
-        $('.home.index .container').removeClass('padded');
+        $('.home.index #resume').removeClass('padded');
         // $('.name').addClass('top');
       }
     }
